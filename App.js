@@ -8,17 +8,19 @@ import NotificationScreen from "./src/screens/NotificationScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import SignInScreen from "./src/screens/SignInScreen";
+import PostScreen from "./src/screens/PostScreen";
 
 import { AuthContext, AuthProvider } from "./src/Provider/AuthProvider";
 import { Entypo, AntDesign, Ionicons } from "@expo/vector-icons";
 const AuthStack = createStackNavigator();
+const NotificationStack = createStackNavigator();
 const HomeTab = createMaterialBottomTabNavigator();
 const AppDrawer = createDrawerNavigator();
 
 const AppDrawerScreen = () => {
     return (
         <AppDrawer.Navigator>
-            <AppDrawer.Screen name="Home" component={HomeTabScreen} />
+            <AppDrawer.Screen name="Home" component={NotificationStackScreen} />
             <AppDrawer.Screen name="Profile" component={ProfileScreen} />
         </AppDrawer.Navigator>
     );
@@ -62,6 +64,21 @@ const HomeTabScreen = () => {
         </HomeTab.Navigator>
     );
 };
+
+const NotificationStackScreen = () => {
+    return (
+        <NotificationStack.Navigator initialRouteName="Home">
+            <NotificationStack.Screen name="HomeTab"
+                component={HomeTabScreen}
+                options={{ headerShown: false }}
+            />
+            <NotificationStack.Screen name="Post"
+                component={PostScreen}
+                options={{ headerShown: false }}
+            />
+        </NotificationStack.Navigator>
+    )
+}
 
 const AuthStackScreen = () => {
     return (

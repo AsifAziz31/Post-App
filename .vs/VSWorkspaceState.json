@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\assets",
+    "\\src",
+    "\\src\\clients",
+    "\\src\\components",
+    "\\src\\functions",
+    "\\src\\Provider",
+    "\\src\\requests",
+    "\\src\\screens"
+  ],
+  "SelectedNode": "\\src\\screens\\NotificationScreen.js",
+  "PreviewInSolutionExplorer": false
+}

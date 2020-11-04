@@ -29,9 +29,6 @@ const ProfileScreen = (props) => {
                     />
                     <Card>
                         <View>
-                            
-                            <Text style={styles.titleStyle}>PROFILE</Text>
-                            <Text> </Text>
                             <Text style={styles.nameStyle}>Name: {auth.CurrentUser.name}</Text>
                             <Text style={styles.otherStyle}>Student ID: {auth.CurrentUser.sid}</Text>
                             <Text style={styles.otherStyle}>Date of Birth: {auth.CurrentUser.dob}</Text>
